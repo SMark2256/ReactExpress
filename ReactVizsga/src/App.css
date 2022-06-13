@@ -11,8 +11,9 @@
   }
 }
 
+
 .nav{
-  height: 40vh;
+  height: 30vh;
   justify-content: center;
   background-color: rgba(20, 20, 60, 0.1);
   border-bottom: 3px solid;
@@ -33,6 +34,11 @@
   margin-top: 30px;
 }
 
+.menu{
+  backdrop-filter: blur(2px);
+  width: 100vw;
+}
+
 .foodtable{
   justify-content: center;
   padding-left: 15%;
@@ -41,10 +47,9 @@
 .loading{
   font-size: 40px;
   text-align: center;
-  justify-content: center;
   background-color: white;
-  height:100vh;
-  width:75%;
+  height:100vw;
+  width: 85%;
 }
 
 .App-header {

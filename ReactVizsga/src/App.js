@@ -1,9 +1,13 @@
+
+import React, {useState,useEffect,useCallback} from 'react'
+import BooksList from './components/BooksList'
+import Footer from './components/Footer'
+import Header from './components/Header'
+
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import React, {useState,useEffect,useCallback} from 'react'
 
-import BooksList from './components/BooksList'
 const axios = require('axios')
 
 
@@ -73,19 +77,21 @@ useEffect(() => {
   return (
     <React.Fragment>
       <div className='nav'>
-        <div className='container'>
-          <h1>Our Foods</h1>
-          <div className="d-inline col-12">
-          <section>
-            <button className="btn-lg mx-2 btn-primary" onClick={fetchMoviesHandler}>Fetch Movies</button>
-            <button className="btn-lg mx-2 btn-primary" onClick={() => setShow(!show)}>Show/Hide</button>
-            <button className="btn-lg mx-2 btn-primary" onClick={() => addHandler(foods)}>Upload</button>
-          </section>
-          <section>
-            <button className="btn mx-2  btn-success" onClick={() => setFoodtype('desserts')}>Hamburger</button>
-            <button className="btn mx-2  btn-success" onClick={() => setFoodtype('breads')}>Drinks</button>
-            <button className="btn mx-2  btn-success" onClick={() => setFoodtype('porks')}>Pizza</button>
-          </section>
+        <div className='menu'>
+          <div className='container'>
+            <h1>Our Foods</h1>
+            <div className="d-inline col-12">
+            <section>
+              <button className="btn-lg mx-2 btn-primary" onClick={fetchMoviesHandler}>Fetch Movies</button>
+              <button className="btn-lg mx-2 btn-primary" onClick={() => setShow(!show)}>Show/Hide</button>
+              <button className="btn-lg mx-2 btn-primary" onClick={() => addHandler(foods)}>Upload</button>
+            </section>
+            <section>
+              <button className="btn mx-2  btn-success" onClick={() => setFoodtype('desserts')}>Hamburger</button>
+              <button className="btn mx-2  btn-success" onClick={() => setFoodtype('breads')}>Drinks</button>
+              <button className="btn mx-2  btn-success" onClick={() => setFoodtype('porks')}>Pizza</button>
+            </section>
+            </div>
           </div>
         </div>
       </div>
@@ -98,6 +104,7 @@ useEffect(() => {
               <img src={logo} className="App-logo" alt="logo" />  
             </div>}
       </section>
+      <Footer/>
     </React.Fragment>
   );
 }

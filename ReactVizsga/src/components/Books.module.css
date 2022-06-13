@@ -1,5 +1,5 @@
 li{
-      background-color: rgba(60, 40, 60, 0.08);
+      background-color: rgba(60, 40, 60, 0);
       opacity: 1;
       border-radius: 8px;
       padding: 5px;
@@ -27,6 +27,9 @@ li h2{
 li p{
       pointer-events: none;
 }
+
+
+
 
 .rankingstar{
       position: relative;
@@ -82,6 +85,9 @@ li p{
       margin-top: 5vh;
       margin-bottom: -5px;
 }
+
+
+
 
 @media screen and (max-width: 1193px) {
       li{
