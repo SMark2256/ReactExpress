@@ -1,18 +1,18 @@
 import React from 'react'
 
-import './Footer.module.css'
+import './Footer.css'
 
 const Footer = () => {
   return (
     <footer className="text-center text-lg-start">
     <div className='menu'>
-        <div className="container p-4 col-lg-6">
+        <div className="container p-4 col-lg-12">
             <div className="row">
-            <div className="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div className="col-lg-3 col-md-12 mb-4 mb-md-0">
 
             </div>
 
-            <div className="col-lg-5 col-md-12 mb-4 mb-md-0">
+            <div className="col-lg-4 col-md-12 mb-4 mb-md-0">
             <h5 className="text-uppercase">ELÉRHETŐSÉGEINK</h5>
     
             <p>
@@ -27,7 +27,7 @@ const Footer = () => {
             </p>
             </div>
 
-            <div className="col-lg-5 col-md-12 mb-4 mb-md-0">
+            <div className="col-lg-4 col-md-12 mb-4 mb-md-0">
             <h5 className="text-uppercase">ÉTELRENDELÉS</h5>
     
             <p>
@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
         </div>
 
-        <div className="text-center p-3">
+        <div className="text-center p-2">
         <strong> © 2022 Copyright</strong>: &nbsp;
         <a className="text-light" href="https://github.com/SMark2256" target="_blank">SMark2256</a>
         </div>

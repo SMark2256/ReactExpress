@@ -12,33 +12,6 @@
 }
 
 
-.nav{
-  height: 30vh;
-  justify-content: center;
-  background-color: rgba(20, 20, 60, 0.1);
-  border-bottom: 3px solid;
-  border-bottom-color: rgba(20, 20, 60, 0.1);
-  background-image: url("https://food-g-app.web.app/static/media/banner.10879cd6.jpg");
-}
-
-.nav section{
-  padding-top: 30px;
-}
-
-
-.nav h1{
-  font-size: 50px;
-  font-weight: bold;
-  color:white;
-  text-align: center;
-  margin-top: 30px;
-}
-
-.menu{
-  backdrop-filter: blur(2px);
-  width: 100vw;
-}
-
 .foodtable{
   justify-content: center;
   padding-left: 15%;
@@ -68,3 +41,6 @@
     transform: rotate(360deg);
   }
 }
+
+
+

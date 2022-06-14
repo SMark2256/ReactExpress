@@ -1,0 +1,20 @@
+
+
+footer{
+    background-image: url("https://food-g-app.web.app/static/media/banner.10879cd6.jpg");   
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+}
+
+
+
+/* 
+@media screen and (height: 937px){
+    footer{
+        position: fixed;
+        bottom: 0;
+    }
+    
+  }
+  
+   */

@@ -1,0 +1,32 @@
+
+
+.blur{
+  width: 100%;
+  height: 102%;
+  backdrop-filter: blur(5px);
+}
+
+
+.nav{
+  height: 30vh;
+  justify-content: center;
+  background-color: rgba(20, 20, 60, 0.1);
+  border-bottom: 3px solid;
+  border-bottom-color: rgba(20, 20, 60, 0.1);
+  background-image: url("https://food-g-app.web.app/static/media/banner.10879cd6.jpg");
+  margin-bottom: 30px;
+}
+
+.nav section{
+  padding-top: 30px;
+}
+
+
+.nav h1{
+  font-size: 50px;
+  font-weight: bold;
+  color:white;
+  text-align: center;
+  margin-top: 30px;
+}
+

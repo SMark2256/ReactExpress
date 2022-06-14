@@ -1,26 +1,30 @@
-li{
-      background-color: rgba(60, 40, 60, 0);
+.card{
+      background-color: rgba(60, 60, 60, 0.1);
       opacity: 1;
       border-radius: 8px;
+      border: 0px;
       padding: 5px;
       min-height: 3.7vh;
       font-size: 15px;
       margin-bottom: 2vh;
 }
 
+
 .pricetag{
       color: brown;
-      font-size: 20px;
+      font-size: 14px;
+      text-align: center;
       font-weight: bold;
 }
 
 li h2{
+      backdrop-filter: blur(4px);
       margin-left: 1vh;
       margin-right: 1vh;
       color: brown;
       text-align: center;
       pointer-events: none;
-      font-size: 18px;
+      font-size: 15px;
       font-weight: bold;
 }
 
@@ -45,7 +49,9 @@ li p{
 }
 
 .rankingstar img{
-      border-radius: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 15px;
 }
 
 .rankingstaricon{
@@ -55,10 +61,10 @@ li p{
 
 .heart{
       background-image: linear-gradient(90deg, rgba(9,120,220,1) 35%, rgba(0,212,255,1) 100%);
-      width: 6vh;
+      width: 5vh;
       height: 3.5vh;
       border: 0px;
-      border-radius: 10px;
+      border-radius: 12px;
       
 }
 
@@ -69,11 +75,11 @@ li p{
 
 .cart{
       background-image: linear-gradient(90deg, rgba(9,120,220,1) 35%, rgba(0,212,255,1) 100%);
-      width: 6vh;
+      width: 5vh;
       height: 3.5vh;
       border: 0px;
-      border-radius: 10px;
-      margin-left: 30%;
+      border-radius: 12px;
+      margin-left: 2%;
 }
 
 .carticon{
@@ -82,7 +88,8 @@ li p{
 }
 
 .iconbuttons{
-      margin-top: 5vh;
+      display: flex;
+      margin-top: 0vh;
       margin-bottom: -5px;
 }
 
