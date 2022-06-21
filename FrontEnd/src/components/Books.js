@@ -11,7 +11,7 @@ const Foods = (props) => {
         <div className="col-2 card mx-2">
         <li className="col-12 container ">
               <div className="rankingstar justify-content-center">
-              <img src={props.img} onError={e => { e.currentTarget.src = logo }} height="120" width="120"/>
+              <img src={props.img} onError={e => { e.currentTarget.src = logo; e.currentTarget.className = "Food-logo" }} height="150" width="150"/>
               <div><p className="rankingstaricon"><FontAwesomeIcon icon={faRankingStar} /> {props.rate}</p></div>
               </div>
               <div className="row justify-content-center">

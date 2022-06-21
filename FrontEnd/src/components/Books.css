@@ -6,12 +6,7 @@
       padding: 5px;
       min-height: 3.7vh;
       margin-bottom: 2vh;
-      height: 30vh;
-}
-
-.cardblur{
-      filter: blur(6px);
-      pointer-events: none;
+      height: 25vh;
 }
 
 

@@ -15,7 +15,7 @@ function App() {
 const [foods, setFoods] = useState([])
 const [isLoading, setLoading] = useState(false)
 const [show, setShow] = useState(true)
-const [foodtype, setFoodtype] = useState('pizzas')
+const [foodtype, setFoodtype] = useState('best-foods')
 
 const fetchMoviesHandler = useCallback( async (foodtype) => {
   setLoading(true);

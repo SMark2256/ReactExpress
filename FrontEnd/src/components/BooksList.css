@@ -8,16 +8,21 @@ ul{
       min-width: 149px;
 }
 
+.cardblur{
+      filter: blur(6px);
+      pointer-events: none;
+}
+
 button{
       margin-bottom: 10px;
 }
 
 .list{
-      height: 65vh;
+      height: 72vh;
       overflow: auto;
       margin-bottom: 20px;
-      margin-left: 5vh;
-      margin-right: 5vh;
+      margin-left: 20vh;
+      margin-right: 25vh;
 }
 
 .listelements{
@@ -25,7 +30,31 @@ button{
 }
 
 .menulist{
-      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3), 0 0 6px black;
-      height: 30vh;
+      box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3), 0 0 6px gray;
+      height: 50vh;
+      width: 30vh;
+      border-radius: 15px;
+}
+
+.menulist img{
+      width: 3vh;
+      height: 3vh;
+}
+
+.menubtn{
+      pointer-events: fill;
+      cursor: pointer;
+      width: 20vh;
+      height: 4vh;
+      margin-left: 5vh;
+      font-weight: bold;
+      box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3), 0 0 3px lightgray;
+      border-radius: 15px;
+      padding-left: 2vh;
+      padding-top: 0.5vh;
+}
+
+.menubtn:hover{
+      background-color: lightgray;
 }
 
