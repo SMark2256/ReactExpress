@@ -15,7 +15,7 @@ function App() {
 const [foods, setFoods] = useState([])
 const [isLoading, setLoading] = useState(false)
 const [show, setShow] = useState(true)
-const [foodtype, setFoodtype] = useState('best-foods')
+const [foodtype, setFoodtype] = useState('pizzas')
 
 const fetchMoviesHandler = useCallback( async (foodtype) => {
   setLoading(true);
@@ -76,15 +76,15 @@ useEffect(() => {
 
   return (
     <React.Fragment>
-      <Header foods={foods} setFoodtype={setFoodtype} setShow={setShow} show={show} addHandler={addHandler} fetchMoviesHandler={fetchMoviesHandler}/>
+      <Header setShow={setShow} show={show} addHandler={addHandler} fetchMoviesHandler={fetchMoviesHandler}/>
       <section className='foodtable'>
-        {foodtype &&show && !isLoading && foods.length > 0 && <BooksList foods={foods}/>}
+        {foodtype && show && !isLoading && foods.length > 0 && <BooksList setFoodtype={setFoodtype} foods={foods}/>}
         {show && !isLoading && foods.length === 0 && <p>Found no foods</p>}
         {isLoading && 
-            <div className='loading'>
-              <h1>Loading...</h1>
-              <img src={logo} className="App-logo" alt="logo" />  
-            </div>}
+            <div className='loading py-5'>
+            <h1>Loading...</h1>
+            <img src={logo} className="App-logo" alt="logo" />  
+          </div>}
       </section>
       <Footer/>
     </React.Fragment>

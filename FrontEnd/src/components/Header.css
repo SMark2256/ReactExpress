@@ -8,7 +8,7 @@
 
 
 .nav{
-  height: 30vh;
+  height: 7vh;
   justify-content: center;
   background-color: rgba(20, 20, 60, 0.1);
   border-bottom: 3px solid;
@@ -26,7 +26,6 @@
   font-size: 50px;
   font-weight: bold;
   color:white;
-  text-align: center;
-  margin-top: 30px;
+  position: absolute;
 }
 

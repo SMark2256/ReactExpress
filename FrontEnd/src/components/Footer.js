@@ -4,15 +4,13 @@ import './Footer.css'
 
 const Footer = () => {
   return (
-    <footer className="text-center text-lg-start">
+    <footer className="text-center text-lg-start fixed-bottom">
     <div className='menu'>
-        <div className="container p-4 col-lg-12">
-            <div className="row">
-            <div className="col-lg-3 col-md-12 mb-4 mb-md-0">
+        <div className="container py-2 col-lg-12">
+            <div className="row justify-content-center">
+          
 
-            </div>
-
-            <div className="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <div className="col-lg-5 col-md-12 mx-4">
             <h5 className="text-uppercase">ELÉRHETŐSÉGEINK</h5>
     
             <p>
@@ -27,7 +25,7 @@ const Footer = () => {
             </p>
             </div>
 
-            <div className="col-lg-4 col-md-12 mb-4 mb-md-0">
+            <div className="col-lg-3 col-md-12 ">
             <h5 className="text-uppercase">ÉTELRENDELÉS</h5>
     
             <p>

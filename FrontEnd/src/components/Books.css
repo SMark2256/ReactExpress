@@ -5,20 +5,23 @@
       border: 0px;
       padding: 5px;
       min-height: 3.7vh;
-      font-size: 15px;
       margin-bottom: 2vh;
+      height: 30vh;
+}
+
+.cardblur{
+      filter: blur(6px);
+      pointer-events: none;
 }
 
 
 .pricetag{
       color: brown;
       font-size: 14px;
-      text-align: center;
       font-weight: bold;
 }
 
 li h2{
-      backdrop-filter: blur(4px);
       margin-left: 1vh;
       margin-right: 1vh;
       color: brown;
@@ -37,6 +40,7 @@ li p{
 
 .rankingstar{
       position: relative;
+
 }
 
 .rankingstar div{
@@ -87,10 +91,11 @@ li p{
       pointer-events: fill;
 }
 
-.iconbuttons{
-      display: flex;
-      margin-top: 0vh;
-      margin-bottom: -5px;
+.iconbutton{
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
 }
 
 

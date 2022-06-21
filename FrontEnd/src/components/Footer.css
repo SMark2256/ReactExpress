@@ -6,7 +6,9 @@ footer{
     font-size: 13px;
 }
 
-
+.menu{
+    backdrop-filter: blur(5px);
+}
 
 /* 
 @media screen and (height: 937px){

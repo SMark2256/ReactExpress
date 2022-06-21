@@ -12,7 +12,7 @@ app.post('/foods', async (req, res) => {
       const foodtype = req.body.foodtype
 
      try {
-            const response = await axios.get(`https://ig-food-menus.herokuapp.com/${foodtype}`);
+            const response = await axios.get(`https://reactvizsga-default-rtdb.europe-west1.firebasedatabase.app/foods/${foodtype}`);
 
             const foodselements = [];
       
