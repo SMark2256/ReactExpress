@@ -17,6 +17,16 @@ import heartfilled from '../media/heartfilled.png'
 const Foods = (props) => {
       const [imgIcon, setimgIcon] = useState(heartunfilled)
 
+      const imgChange = (imgTo) =>{
+            imgTo === heartunfilled ? setimgIcon(heartfilled) : setimgIcon(heartunfilled)
+      }
+
+
+      const intoCart = (foodName, foodType) =>{
+            console.log(foodName)
+            console.log(foodType)
+      }
+
   return (
         <div className="col-2 card mx-2">
         <li className="col-12 container ">
@@ -29,8 +39,8 @@ const Foods = (props) => {
               <p className="pricetag">${props.price}</p>
               </div>
               <div className="iconbutton row justify-content-center"><h2>
-                  <button className="heart mx-2"><img src={imgIcon} className="hearticon" onClick={() => setimgIcon(heartfilled)}/></button>
-                  <button className="cart mx-2"><img src={carticon} className="carticon" onClick={() => console.log("kosárba")}/></button>
+                  <button className="heart mx-2"><img src={imgIcon} className="hearticon" onClick={() => imgChange(imgIcon)}/></button>
+                  <button className="cart mx-2"><img src={carticon} className="carticon" onClick={() => intoCart(props.id, props.type)}/></button>
                   </h2>
               </div>
         </li>

@@ -36,7 +36,8 @@ const BooksList = ({setFoodtype, foods}) => {
                         <ul className="row col-lg-10">
                               {foods.map((foods) => (
                                     <Foods
-                                          key={foods.id}
+                                          id={foods.id}
+                                          type={foods.type}
                                           name={foods.name}
                                           img={foods.img}
                                           price={foods.price}

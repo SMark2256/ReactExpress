@@ -18,8 +18,10 @@ app.post('/foods', async (req, res) => {
       
             for (const key in response.data) {
               foodselements.push({
-                    id: key,
+                    key: key,
+                    id: response.data[key].id,
                     name: response.data[key].name,
+                    type: foodtype,
                     img: response.data[key].img,
                     price: response.data[key].price,
                     rate: response.data[key].rate,
