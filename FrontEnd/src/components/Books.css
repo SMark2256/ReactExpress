@@ -64,7 +64,6 @@ li p{
 }
 
 .hearticon{
-      color: white;
       pointer-events: fill;
       height: 3.5vh;
 }
@@ -76,7 +75,6 @@ li p{
 }
 
 .carticon{
-      color: white;
       pointer-events: fill;
       height: 4vh;
 }
@@ -89,9 +87,17 @@ li p{
 }
 
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 2600px) {
       .card{
-            height: 30vh;
+            height: 25vh;
+      }
+
+      .carticon{
+            height: 3vh;
+      }
+
+      .hearticon{
+            height: 2.5vh;
       }
   }
   
