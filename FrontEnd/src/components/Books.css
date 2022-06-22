@@ -6,7 +6,7 @@
       padding: 5px;
       min-height: 3.7vh;
       margin-bottom: 2vh;
-      height: 25vh;
+      height: 34vh;
 }
 
 
@@ -59,23 +59,17 @@ li p{
 }
 
 .heart{
-      background-image: linear-gradient(90deg, rgba(9,120,220,1) 35%, rgba(0,212,255,1) 100%);
-      width: 5vh;
-      height: 3.5vh;
       border: 0px;
       border-radius: 12px;
-      
 }
 
 .hearticon{
       color: white;
       pointer-events: fill;
+      height: 3.5vh;
 }
 
 .cart{
-      background-image: linear-gradient(90deg, rgba(9,120,220,1) 35%, rgba(0,212,255,1) 100%);
-      width: 5vh;
-      height: 3.5vh;
       border: 0px;
       border-radius: 12px;
       margin-left: 2%;
@@ -84,6 +78,7 @@ li p{
 .carticon{
       color: white;
       pointer-events: fill;
+      height: 4vh;
 }
 
 .iconbutton{
@@ -93,6 +88,13 @@ li p{
       bottom: 0;
 }
 
+
+@media screen and (max-width: 1440px) {
+      .card{
+            height: 30vh;
+      }
+  }
+  
 
 
 

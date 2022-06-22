@@ -1,9 +1,6 @@
 import React from 'react'
 import Foods from './Books.js'
 
-import {GiFullPizza, GiHamburger} from 'react-icons/gi'
-import {TbGlassFull} from 'react-icons/tb'
-import {RiCake3Fill} from 'react-icons/ri'
 import pizzas from '../media/Pizza.svg'
 import breads from '../media/Bread.svg'
 import burgers from '../media/Burger.svg'
@@ -24,7 +21,7 @@ const BooksList = ({setFoodtype, foods}) => {
       <div className="container-fluid list">
             <div className="row listelements">
                   <div className="col-2 justify-content-center h-75">
-                        <div className="col-6 mx-2 py-4 bg-light text-black menulist">
+                        <div className="col-6 py-4 bg-light text-black menulist">
                               <h2 className="text-center">Menü</h2><br></br>
                               <p className="menubtn" onClick={() => setFoodtype('burgers')}><img src={burgers} alt="burgers" /> Hamburgerek</p>
                               <p className="menubtn" onClick={() => setFoodtype('pizzas')}><img src={pizzas} alt="pizza" />  Pizzák</p>

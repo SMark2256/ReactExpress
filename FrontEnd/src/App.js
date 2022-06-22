@@ -12,67 +12,67 @@ const axios = require('axios')
 
 
 function App() {
-const [foods, setFoods] = useState([])
-const [isLoading, setLoading] = useState(false)
-const [show, setShow] = useState(true)
-const [foodtype, setFoodtype] = useState('best-foods')
-
-const fetchMoviesHandler = useCallback( async (foodtype) => {
-  setLoading(true);
-  try {
-      const response = await axios.post(`http://localhost:3001/foods`, {foodtype});
-    
-      setFoods(response.data)
-
-      console.log(response.data)
-
-
-      /*const data = await response.json();
-
-      console.log(data);
-
-
-      const foodselements = [];
-
-      for (const key in data) {
-        foodselements.push({
-              id: key,
-              name: data[key].name,
-              img: data[key].img,
-              price: data[key].price,
-              rate: data[key].rate,
-          });
-      }
-
-      setFoods(foodselements);
-*/
-  }catch (e){
-      console.log(e);
+  const [foods, setFoods] = useState([])
+  const [isLoading, setLoading] = useState(false)
+  const [show, setShow] = useState(true)
+  const [foodtype, setFoodtype] = useState('best-foods')
+  
+  const fetchMoviesHandler = useCallback( async (foodtype) => {
+    setLoading(true);
+    try {
+        const response = await axios.post(`http://localhost:3001/foods`, {foodtype});
+      
+        setFoods(response.data)
+  
+        console.log(response.data)
+  
+  
+        /*const data = await response.json();
+  
+        console.log(data);
+  
+  
+        const foodselements = [];
+  
+        for (const key in data) {
+          foodselements.push({
+                id: key,
+                name: data[key].name,
+                img: data[key].img,
+                price: data[key].price,
+                rate: data[key].rate,
+            });
+        }
+  
+        setFoods(foodselements);
+  */
+    }catch (e){
+        console.log(e);
+    }
+    setLoading(false);
+  }, [])
+  
+  
+  async  function addHandler(foods) {
+  
+    const response = await fetch(`https://reactvizsga-default-rtdb.europe-west1.firebasedatabase.app/foods/${foodtype}.json`, {
+        method: 'POST',
+        body: JSON.stringify(foods),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = response.json();
+    console.log(data);
+  
   }
-  setLoading(false);
-}, [])
-
-
-async  function addHandler(foods) {
-
-  const response = await fetch(`https://reactvizsga-default-rtdb.europe-west1.firebasedatabase.app/foods/${foodtype}.json`, {
-      method: 'POST',
-      body: JSON.stringify(foods),
-      headers: {
-          'Content-Type': 'application/json'
-      }
-  });
-  const data = response.json();
-  console.log(data);
-
-}
-
-
-
-useEffect(() => {
-  fetchMoviesHandler(foodtype);
-}, [foodtype]);
-
+  
+  
+  
+  useEffect(() => {
+    fetchMoviesHandler(foodtype);
+  }, [foodtype]);
+  
 
   return (
     <React.Fragment>

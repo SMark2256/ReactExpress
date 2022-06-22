@@ -18,10 +18,10 @@ button{
 }
 
 .list{
-      height: 72vh;
+      height: 65vh;
       overflow: auto;
       margin-bottom: 20px;
-      margin-left: 20vh;
+      margin-left: 23vh;
       margin-right: 25vh;
 }
 
@@ -31,7 +31,7 @@ button{
 
 .menulist{
       box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3), 0 0 6px gray;
-      height: 50vh;
+      height: 500px;
       width: 30vh;
       border-radius: 15px;
 }
@@ -58,3 +58,16 @@ button{
       background-color: lightgray;
 }
 
+
+
+
+@media screen and (max-width: 1440px) {
+      .menulist{
+            height: 50vh;
+      }
+
+      .list{
+            height: 72vh;
+      }
+  }
+  

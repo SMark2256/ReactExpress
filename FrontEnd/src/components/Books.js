@@ -1,12 +1,22 @@
-import React from 'react'
-import logo from '../logo.svg'
+import React, {useState} from 'react'
+
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping,faHeartCircleCheck,faRankingStar } from '@fortawesome/free-solid-svg-icons'
 import './Books.css'
 
+
+import logo from '../logo.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRankingStar } from '@fortawesome/free-solid-svg-icons'
+import carticon from '../media/cart.png'
+import heartunfilled from '../media/heartunfilled.png'
+import heartfilled from '../media/heartfilled.png'
+
+
+
 const Foods = (props) => {
+      const [imgIcon, setimgIcon] = useState(heartunfilled)
+
   return (
         <div className="col-2 card mx-2">
         <li className="col-12 container ">
@@ -19,8 +29,8 @@ const Foods = (props) => {
               <p className="pricetag">${props.price}</p>
               </div>
               <div className="iconbutton row justify-content-center"><h2>
-                  <button className="heart mx-2"><FontAwesomeIcon className="hearticon" icon={faHeartCircleCheck} /></button>
-                  <button className="cart mx-2"><FontAwesomeIcon className="carticon" icon={faCartShopping} /></button>
+                  <button className="heart mx-2"><img src={imgIcon} className="hearticon" onClick={() => setimgIcon(heartfilled)}/></button>
+                  <button className="cart mx-2"><img src={carticon} className="carticon" onClick={() => console.log("kosárba")}/></button>
                   </h2>
               </div>
         </li>
