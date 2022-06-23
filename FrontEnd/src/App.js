@@ -3,6 +3,8 @@ import BooksList from './components/BooksList'
 import Footer from './components/Footer'
 import Header from './components/Header'
 
+import { collection, getDocs } from 'firebase/firestore'
+import db from './util/firebase.js'
 
 import logo from './logo.svg';
 import './App.css';
@@ -17,36 +19,45 @@ function App() {
   const [isLoading, setLoading] = useState(false)
   const [show, setShow] = useState(true)
   const [foodtype, setFoodtype] = useState('best-foods')
+
+
+  
   
   const fetchMoviesHandler = useCallback( async (foodtype) => {
     setLoading(true);
     try {
-        const response = await axios.post(`http://localhost:3001/foods`, {foodtype});
-      
-        setFoods(response.data)
+        //const response = await axios.post(`http://localhost:3001/foods`, {foodtype});
+        const response = collection(db,'burgers');
+        
+        getDocs(response)
+        .then(response => {
+          console.log(response)
+        })
+
+        // setFoods(response.data)
+        
+        // console.log(response.data)
   
-        console.log(response.data)
+  
+        // const data = await response.json();
+  
+        // console.log(data);
   
   
-        /*const data = await response.json();
+        // const foodselements = [];
   
-        console.log(data);
+        // for (const key in data) {
+        //   foodselements.push({
+        //         id: key,
+        //         name: data[key].name,
+        //         img: data[key].img,
+        //         price: data[key].price,
+        //         rate: data[key].rate,
+        //     });
+        // }
   
-  
-        const foodselements = [];
-  
-        for (const key in data) {
-          foodselements.push({
-                id: key,
-                name: data[key].name,
-                img: data[key].img,
-                price: data[key].price,
-                rate: data[key].rate,
-            });
-        }
-  
-        setFoods(foodselements);
-  */
+        // setFoods(foodselements);
+
     }catch (e){
         console.log(e);
     }
