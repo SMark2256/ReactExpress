@@ -25,6 +25,7 @@ function App() {
   //https://www.youtube.com/watch?v=jcnBoWRGw4o&ab_channel=MartinDichtler
   //https://firebase.google.com/docs/web/setup
 
+  //https://firebase.google.com/docs/database/web/read-and-write  -- adatkezelés
 
   const fetchMoviesHandler = useCallback( async (foodtype) => {
     setLoading(true);
