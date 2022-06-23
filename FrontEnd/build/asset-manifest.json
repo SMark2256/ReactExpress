@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.13a9fd9a.css",
+    "main.js": "/static/js/main.1ee85220.js",
+    "static/js/787.3fc36299.chunk.js": "/static/js/787.3fc36299.chunk.js",
+    "static/media/heartunfilled.png": "/static/media/heartunfilled.8282275b4a8053bf5eb5.png",
+    "static/media/heartfilled.png": "/static/media/heartfilled.c281b201393b5edcd249.png",
+    "static/media/Pizza.svg": "/static/media/Pizza.fd205bec9a5d0488a3cad4fdb5f28c77.svg",
+    "static/media/Steak.svg": "/static/media/Steak.ed2e0e2799f2e5cf209cf1ee17d4c326.svg",
+    "static/media/Donut.svg": "/static/media/Donut.02b016f8e8c03cb1ca9ab032318101f3.svg",
+    "static/media/Sandwich.svg": "/static/media/Sandwich.a99ef60afa048be6b276b20f654317c9.svg",
+    "static/media/Burger.svg": "/static/media/Burger.bb318e1744eeea2d6f215e59424039b8.svg",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/Juice.svg": "/static/media/Juice.27b5793804e55b93acf3a434b10e38c1.svg",
+    "static/media/Bread.svg": "/static/media/Bread.60bc0de84195d6ad53e627e1addb8fb6.svg",
+    "index.html": "/index.html",
+    "main.13a9fd9a.css.map": "/static/css/main.13a9fd9a.css.map",
+    "main.1ee85220.js.map": "/static/js/main.1ee85220.js.map",
+    "787.3fc36299.chunk.js.map": "/static/js/787.3fc36299.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13a9fd9a.css",
+    "static/js/main.1ee85220.js"
+  ]
+}
