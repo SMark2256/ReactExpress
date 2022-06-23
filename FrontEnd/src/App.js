@@ -3,7 +3,7 @@ import BooksList from './components/BooksList'
 import Footer from './components/Footer'
 import Header from './components/Header'
 
-import { collection, getDocs } from 'firebase/firestore'
+//import { collection, getDocs } from 'firebase/firestore'
 import db from './util/firebase.js'
 
 import logo from './logo.svg';
@@ -21,17 +21,19 @@ function App() {
   const [foodtype, setFoodtype] = useState('best-foods')
 
 
-  
-  
+  //https://www.youtube.com/watch?v=jcnBoWRGw4o&ab_channel=MartinDichtler
+  //https://firebase.google.com/docs/web/setup
+
+
   const fetchMoviesHandler = useCallback( async (foodtype) => {
     setLoading(true);
     try {
         //const response = await axios.post(`http://localhost:3001/foods`, {foodtype});
-        const response = collection(db,'burgers');
+        const response = collection(db,'Foods');
         
         getDocs(response)
         .then(response => {
-          console.log(response)
+          console.log(response.docs)
         })
 
         // setFoods(response.data)
