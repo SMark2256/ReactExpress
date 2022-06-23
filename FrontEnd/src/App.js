@@ -5,9 +5,10 @@ import Header from './components/Header'
 
 //import { collection, getDocs } from 'firebase/firestore'
 import db from './util/firebase.js'
+import { ref, onValue, onChildRemoved} from "firebase/database"
 
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -28,37 +29,66 @@ function App() {
   const fetchMoviesHandler = useCallback( async (foodtype) => {
     setLoading(true);
     try {
-        //const response = await axios.post(`http://localhost:3001/foods`, {foodtype});
-        const response = collection(db,'Foods');
-        
-        getDocs(response)
-        .then(response => {
-          console.log(response.docs)
+       
+
+      // const response = await axios.get( `https://ig-food-menus.herokuapp.com/best-foods` );
+      // const data = await response.data;
+      // console.log(data);
+     
+      // const foodselements = [];
+      // for (const key in data) {
+      //   foodselements.push({
+      //         id: data[key].id,
+      //         name: data[key].name,
+      //         img: data[key].img,
+      //         price: data[key].price,
+      //         rate: data[key].rate,
+      //     });
+      // }
+      // setFoods(foodselements);
+      // console.log(foodselements);
+
+
+
+
+
+        const starCountRef = ref(db, `/foods/${foodtype}`)
+        onValue(starCountRef, (snapshot) => {
+          snapshot.forEach((childSnapshot) => {
+          const response = childSnapshot.val()
+
+          const data = response
+            console.log(data)
+          const foodselements = [];
+  
+        for (const key in data) {
+          foodselements.push({
+              key: key,
+              id: data[key].id,
+              name: data[key].name,
+              type: foodtype,
+              img: data[key].img,
+              price: data[key].price,
+              rate: data[key].rate
+            });
+        }
+        //console.log(foodselements)
+        setFoods(foodselements);
+          })
+          
         })
 
-        // setFoods(response.data)
+
+
+
+
+
+
+
+
+
+       
         
-        // console.log(response.data)
-  
-  
-        // const data = await response.json();
-  
-        // console.log(data);
-  
-  
-        // const foodselements = [];
-  
-        // for (const key in data) {
-        //   foodselements.push({
-        //         id: key,
-        //         name: data[key].name,
-        //         img: data[key].img,
-        //         price: data[key].price,
-        //         rate: data[key].rate,
-        //     });
-        // }
-  
-        // setFoods(foodselements);
 
     }catch (e){
         console.log(e);
@@ -90,7 +120,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <Header setShow={setShow} show={show} addHandler={addHandler} fetchMoviesHandler={fetchMoviesHandler}/>
+      <Header foods={foods} setShow={setShow} show={show} addHandler={addHandler} fetchMoviesHandler={fetchMoviesHandler}/>
       <section className='foodtable'>
         {foodtype && show && !isLoading && foods.length > 0 && <BooksList setFoodtype={setFoodtype} foods={foods}/>}
         {show && !isLoading && foods.length === 0 && <p>Found no foods</p>}

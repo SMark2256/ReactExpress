@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Header.css'
 
-const Header= ({setShow, show}) => {
+const Header= ({addHandler,foods,setShow, show}) => {
   return (
     <div className="nav">
         <div className="blur">
@@ -15,6 +15,7 @@ const Header= ({setShow, show}) => {
             {/* <div className="d-block">
               <button className="btn-lg mx-2 btn-primary" onClick={fetchMoviesHandler}>Fetch Movies</button>
               <button className="btn-lg mx-2 btn-primary" onClick={() => setShow(!show)}>Show/Hide</button>
+               <button className="btn-lg mx-2 btn-primary" onClick={() => addHandler(foods)}>Upload</button>
               <button className="btn-lg mx-2 btn-primary" onClick={() => addHandler(foods)}>Upload</button>
             </div>
             <div className="container col-2">

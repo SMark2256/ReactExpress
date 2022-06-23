@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp, database } from 'firebase/app'
+import { initializeApp } from 'firebase/app'
+import { getDatabase } from 'firebase/database'
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -10,7 +11,7 @@ import { initializeApp, database } from 'firebase/app'
 const firebaseConfig = {
   apiKey: "AIzaSyDNPU0KdhOVh-y3h5_X5k_pps_KYEhGR5Q",
   authDomain: "reactvizsga.firebaseapp.com",
-  databaseURL: "https://reactvizsga-default-rtdb.europe-west1.firebasedatabase.app/foods",
+  databaseURL: "https://reactvizsga-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "reactvizsga",
   storageBucket: "reactvizsga.appspot.com",
   messagingSenderId: "276176096219",
@@ -19,9 +20,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-initializeApp(firebaseConfig)
+const app = initializeApp(firebaseConfig)
 // Initialize Firestore
-const db = database()
+const db = getDatabase(app)
 
 
 export default db

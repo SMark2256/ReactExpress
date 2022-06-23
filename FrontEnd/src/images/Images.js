@@ -10,7 +10,7 @@ const IMAGES = {
     donuts: require('./media/Donut.svg').default,
 
     //Foods.js
-    carticon: require('./media/Cart.png').default,
+    carticon: require('./media/cart.png').default,
     heartunfilled: require('./media/heartunfilled.png').default,
     heartfilled: require ('./media/heartfilled.png').default
 
