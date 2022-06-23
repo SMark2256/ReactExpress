@@ -23,10 +23,12 @@
 
 
 .foodtable{
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
   margin-left: 2vh;
   margin-right: 2vh;
   border-radius: 15px;
+  height: 71vh;
+  overflow: hidden;
 }
 
 .loading{

@@ -8,7 +8,7 @@ import './Books.css'
 import logo from '../logo.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRankingStar } from '@fortawesome/free-solid-svg-icons'
-import carticon from '../images/media/cart.png'
+import carticon from '../images/media/Cart.png'
 import heartunfilled from '../images/media/heartunfilled.png'
 import heartfilled from '../images/media/heartfilled.png'
 

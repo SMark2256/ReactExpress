@@ -11,7 +11,7 @@ const Header= ({setShow, show}) => {
             <div className="col-12 py-3">
               <button className="btn mx-2 btn-primary" onClick={() => setShow(!show)}>Bejelentkezés</button>
             </div>
-            <h1 className="col-12 py-1 mx-5 text-center">Our Foods</h1>
+            <h1 className="col-12 py-1 text-center">Our Foods</h1>
             {/* <div className="d-block">
               <button className="btn-lg mx-2 btn-primary" onClick={fetchMoviesHandler}>Fetch Movies</button>
               <button className="btn-lg mx-2 btn-primary" onClick={() => setShow(!show)}>Show/Hide</button>

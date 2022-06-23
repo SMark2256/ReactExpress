@@ -14,8 +14,8 @@ const BooksList = ({setFoodtype, foods}) => {
       <div className="container-fluid list">
             <div className="row listelements">
                   <div className="col-2 justify-content-center h-75">
-                        <div className="col-6 py-4 bg-light text-black menulist">
-                              <h2 className="text-center">Menü</h2><br></br>
+                        <div className="col-6 py-4 bg-light text-black sticky text-black menulist">
+                              <h2 className="text-center">MENU</h2>
                               <p className="menubtn" onClick={() => setFoodtype('burgers')}><img src={IMAGES.burgers} alt="burgers" /> Hamburgerek</p>
                               <p className="menubtn" onClick={() => setFoodtype('pizzas')}><img src={IMAGES.pizzas} alt="pizza" />  Pizzák</p>
                               <p className="menubtn" onClick={() => setFoodtype('drinks')}><img src={IMAGES.juices} alt="juices" /> Üditőitalok</p>
@@ -25,7 +25,7 @@ const BooksList = ({setFoodtype, foods}) => {
                               <p className="menubtn" onClick={() => setFoodtype('desserts')}><img src={IMAGES.donuts} alt="donuts" /> Desszertek</p>
                         </div>
                   </div>
-                  <div className="col-10">
+                  <div className="col-10 foodslist">
                         <ul className="row col-lg-10">
                               {foods.map((foods) => (
                                     <Foods

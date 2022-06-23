@@ -4,10 +4,17 @@ footer{
     background-image: url("https://food-g-app.web.app/static/media/banner.10879cd6.jpg");   
     color: rgb(255, 255, 255);
     font-size: 13px;
+    height: 148px;
 }
 
 .menu{
     backdrop-filter: blur(5px);
+}
+
+h5{
+    font-family: 'Rubik Moonrocks';
+    font-size: 25px;
+    letter-spacing: 2px;
 }
 
 /* 

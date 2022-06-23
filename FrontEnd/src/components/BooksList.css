@@ -19,27 +19,36 @@ button{
 
 .list{
       height: 65vh;
-      overflow: auto;
       margin-bottom: 20px;
       margin-left: 23vh;
       margin-right: 25vh;
 }
 
 .listelements{
-      margin-top: 30px;
+      margin-top: 2vh;
 }
 
 .menulist{
-      box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3), 0 0 6px gray;
+      box-shadow: inset 0 0 16px rgba(250, 250, 250, 0.6), 0 0 12px gray;
       height: 500px;
       width: 30vh;
       border-radius: 15px;
+      margin-top: 8vh;
+}
+
+.menulist h2{
+      font-family: 'Rubik Moonrocks';
+      font-size: 36px;
+      pointer-events: none;
+      letter-spacing: 2px;
 }
 
 .menulist img{
       width: 3vh;
       height: 3vh;
 }
+
+
 
 .menubtn{
       pointer-events: fill;
@@ -48,7 +57,7 @@ button{
       height: 4vh;
       margin-left: 5vh;
       font-weight: bold;
-      box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3), 0 0 3px lightgray;
+      box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3), 0 0 8px gray;
       border-radius: 15px;
       padding-left: 2vh;
       padding-top: 0.5vh;
@@ -59,7 +68,10 @@ button{
 }
 
 
-
+.foodslist{
+      overflow: auto;
+      height: 70vh;
+}
 
 @media screen and (max-width: 2600px) {
       .menulist{

@@ -7,6 +7,7 @@
       min-height: 3.7vh;
       margin-bottom: 2vh;
       height: 34vh;
+      box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2), 0 0 8px lightgray;
 }
 
 
@@ -88,16 +89,16 @@ li p{
 
 
 @media screen and (max-width: 2600px) {
-      .card{
+      /* .card{
             height: 25vh;
-      }
+      } */
 
       .carticon{
-            height: 3vh;
+            height: 3.5vh;
       }
 
       .hearticon{
-            height: 2.5vh;
+            height: 3vh;
       }
   }
   
