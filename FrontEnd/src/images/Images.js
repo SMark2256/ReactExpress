@@ -12,7 +12,9 @@ const IMAGES = {
     //Foods.js
     carticon: require('./media/cart.png').default,
     heartunfilled: require('./media/heartunfilled.png').default,
-    heartfilled: require ('./media/heartfilled.png').default
+    heartfilled: require('./media/heartfilled.png').default,
+
+    logo: require('./logo.svg').default
 
 }
 
