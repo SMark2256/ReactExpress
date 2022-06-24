@@ -20,7 +20,7 @@ const Footer = () => {
             <h5 className="text-uppercase">ELÉRHETŐSÉGEINK</h5>
     
             <p>
-                2060 Bicske, Szent Béla út 22.<br/>
+                1111 Budapest, Szent Béla út 22.<br/>
                 Tel: (22) 261 ***, (22) 565 ***
             </p>
             </div>

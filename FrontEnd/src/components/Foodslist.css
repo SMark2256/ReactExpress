@@ -20,12 +20,13 @@ button{
 .list{
       height: 65vh;
       margin-bottom: 20px;
-      margin-left: 23vh;
       margin-right: 25vh;
+      margin-left: 10vh;
 }
 
 .listelements{
       margin-top: 2vh;
+
 }
 
 .menulist{
@@ -71,6 +72,7 @@ button{
 .foodslist{
       overflow: auto;
       height: 70vh;
+      margin-top: -1.5vh;
 }
 
 @media screen and (max-width: 2600px) {
