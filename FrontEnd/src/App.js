@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 //components
-import BooksList from './components/BooksList'
+import BooksList from './components/Foodslist'
 import Footer from './components/Footer'
 import Header from './components/Header'
 //util

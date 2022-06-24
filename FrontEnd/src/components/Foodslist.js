@@ -3,7 +3,7 @@ import React from 'react'
 import Foods from './Foods.js'
 //css
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './BooksList.css'
+import './Foodslist.css'
 //images
 import IMAGES from '../images/Images.js'
 
