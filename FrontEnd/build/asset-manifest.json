@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.5c74aa12.css",
-    "main.js": "/static/js/main.e57a66d6.js",
+    "main.css": "/static/css/main.3ac5bff6.css",
+    "main.js": "/static/js/main.139e8ca4.js",
     "static/js/787.3fc36299.chunk.js": "/static/js/787.3fc36299.chunk.js",
+    "static/media/background.jpg": "/static/media/background.10879cd668cc3e9a1ece.jpg",
     "static/media/heartunfilled.png": "/static/media/heartunfilled.8282275b4a8053bf5eb5.png",
     "static/media/heartfilled.png": "/static/media/heartfilled.c281b201393b5edcd249.png",
     "static/media/Pizza.svg": "/static/media/Pizza.fd205bec9a5d0488a3cad4fdb5f28c77.svg",
@@ -14,12 +15,12 @@
     "static/media/Juice.svg": "/static/media/Juice.27b5793804e55b93acf3a434b10e38c1.svg",
     "static/media/Bread.svg": "/static/media/Bread.60bc0de84195d6ad53e627e1addb8fb6.svg",
     "index.html": "/index.html",
-    "main.5c74aa12.css.map": "/static/css/main.5c74aa12.css.map",
-    "main.e57a66d6.js.map": "/static/js/main.e57a66d6.js.map",
+    "main.3ac5bff6.css.map": "/static/css/main.3ac5bff6.css.map",
+    "main.139e8ca4.js.map": "/static/js/main.139e8ca4.js.map",
     "787.3fc36299.chunk.js.map": "/static/js/787.3fc36299.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c74aa12.css",
-    "static/js/main.e57a66d6.js"
+    "static/css/main.3ac5bff6.css",
+    "static/js/main.139e8ca4.js"
   ]
 }

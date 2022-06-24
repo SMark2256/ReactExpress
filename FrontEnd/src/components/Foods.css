@@ -36,16 +36,16 @@ li p{
 
 .rankingstar{
       position: relative;
-
 }
 
 .rankingstar div{
       position: absolute;
       font-size: 20px;
       z-index: 2;
-      top: 1vh; 
-      left: 4.2%; 
+      top: 0.5vh; 
+      left: -6%; 
       width: 100%; 
+
 }
 
 .rankingstar img{
@@ -55,8 +55,11 @@ li p{
 }
 
 .rankingstaricon{
-      background-color: rgba(20, 20, 20, 0.7);
-      width: 6vh; 
+      background-color: rgba(60, 60, 60, .9);
+      box-shadow: inset 0 0 4px rgba(250, 250, 250, .8), 2px 2px 3px rgba(250, 250, 250, 1);
+      border-radius: 5px;
+      width: 70px;
+      height: 35px; 
 }
 
 .heart{

@@ -4,8 +4,8 @@ import React, {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Foods.css'
 //icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRankingStar } from '@fortawesome/free-solid-svg-icons'
+import { FaGrinStars } from 'react-icons/fa'
+import { BsStarHalf, BsStarFill } from 'react-icons/bs'
 //images
 import carticon from '../images/media/cart.png'
 import heartunfilled from '../images/media/heartunfilled.png'
@@ -32,7 +32,7 @@ const Foods = (props) => {
         <li className="col-12 container ">
               <div className="rankingstar justify-content-center">
               <img src={props.img} onError={e => { e.currentTarget.src = IMAGES.logo; setimgClass("Food-logo") }} className={imgClass} height="150" width="150" alt=""/>
-              <div><p className="rankingstaricon"><FontAwesomeIcon icon={faRankingStar} /> {props.rate}</p></div>
+              <div><p className="rankingstaricon"> { props.rate <= 3 ? <BsStarHalf/> : props.rate === 5 ? <FaGrinStars/> : <BsStarFill/> } {props.rate}</p></div>
               </div>
               <div className="row justify-content-center">
               <h2>{props.name}</h2>
