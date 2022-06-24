@@ -10,12 +10,14 @@ const Header= ({foodtype, foods, setShow, show}) => {
   return (
     <div className="nav">
         <div className="blur">
-          <div className="container-fluid col-12 row py-2">
-            <div className="col-4">
-              <button className="btn mx-4 btn-primary" onClick={() => setShow(!show)}>Bejelentkezés</button>
+          <div className="container-fluid col-12 row">
+            <div className="col-4 gx-0 py-3">
+              <button className="btn mx-5 btn-primary" onClick={() => setShow(!show)}>Főoldal</button>
+              <button className="btn mx-2 btn-primary" onClick={() => setShow(!show)}>Rendelés</button>
+              <button className="btn mx-2 btn-primary" onClick={() => setShow(!show)}>Bejelentkezés</button>
             </div>
 
-            <div className="col-4 text-center">
+            <div className="col-4 py-2 text-center">
               <h1>Our Foods</h1>
               {/* <button className="btn mx-2 btn-warning" onClick={() => addHandler(foods,foodtype)}>Kosár</button> */}
             </div>
@@ -37,7 +39,7 @@ const Header= ({foodtype, foods, setShow, show}) => {
             
             </div> */}
 
-            <div className="col-4 text-center">
+            <div className="col-4 text-center py-3">
               <CgProfile size={40} role="button" className="mx-4 bg-dark text-white rounded-circle" onClick={() => console.log("profile page")}/>
             </div>
           </div>
