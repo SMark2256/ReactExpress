@@ -1,4 +1,4 @@
- async function addHandler(foods) {
+ async function addHandler(foods,foodtype) {
   
       const response = await fetch(`https://reactvizsga-default-rtdb.europe-west1.firebasedatabase.app/foods/${foodtype}.json`, {
           method: 'POST',

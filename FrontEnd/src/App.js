@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 //components
 import BooksList from './components/BooksList'
 import Footer from './components/Footer'
@@ -8,8 +8,7 @@ import fetchMoviesHandler from './util/Getdata.js'
 //css
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-//images
-import IMAGES from './images/Images.js'
+
 
 function App() {
   const [foods, setFoods] = useState([])
@@ -22,21 +21,16 @@ function App() {
     fetchMoviesHandler(foodtype,setFoods,setLoading);
   }, [foodtype]);
 
+  console.log("LOADING?"+isLoading)
   return (
     <React.Fragment>
-      <Header foods={foods} setShow={setShow} show={show} fetchMoviesHandler={fetchMoviesHandler}/>
+      <Header foods={foods} foodtype={foodtype} setShow={setShow} show={show} fetchMoviesHandler={fetchMoviesHandler}/>
       <section className='foodtable'>
-        {foodtype && show && !isLoading && foods.length > 0 && 
-          <BooksList setFoodtype={setFoodtype} foods={foods}/>
+        {show && foods.length > 0 && 
+          <BooksList isLoading={isLoading} setFoodtype={setFoodtype} foods={foods}/>
         }
         {show && !isLoading && foods.length === 0 && 
-          <p>Found no foods</p>
-        }
-        {isLoading && 
-          <div className='loading py-5'>
-            <h1>Loading...</h1>
-            <img src={IMAGES.logo} className="App-logo" alt="logo" />  
-          </div>
+          <p className='text-center text-bold'>Found no foods</p>
         }
       </section>
       <Footer/>

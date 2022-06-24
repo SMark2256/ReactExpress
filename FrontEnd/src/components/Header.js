@@ -4,7 +4,7 @@ import addHandler from '../util/Postdata.js'
 //css
 import './Header.css'
 
-const Header= ({foods,setShow, show}) => {
+const Header= ({foodtype, foods, setShow, show}) => {
   return (
     <div className="nav">
         <div className="blur">
@@ -12,7 +12,7 @@ const Header= ({foods,setShow, show}) => {
             <div className="row d-flex col-12">
             <div className="col-12 py-3">
               <button className="btn mx-2 btn-primary" onClick={() => setShow(!show)}>Bejelentkezés</button>
-              <button className="btn-lg mx-2 btn-primary" onClick={() => addHandler(foods)}>Upload</button>
+              {/* <button className="btn mx-2 btn-warning" onClick={() => addHandler(foods,foodtype)}>Kosár</button> */}
             </div>
             <h1 className="col-12 py-1 text-center">Our Foods</h1>
             {/* <div className="d-block">

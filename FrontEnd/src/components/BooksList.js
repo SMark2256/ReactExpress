@@ -1,13 +1,13 @@
 import React from 'react'
-import Foods from './Books.js'
-
+//component
+import Foods from './Foods.js'
+//css
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './BooksList.css'
-import './scrollbar.css' //valami nem oké
-
+//images
 import IMAGES from '../images/Images.js'
 
-const BooksList = ({setFoodtype, foods}) => {
+const BooksList = ({setFoodtype, foods, isLoading}) => {
       
 
   return (
@@ -26,6 +26,19 @@ const BooksList = ({setFoodtype, foods}) => {
                         </div>
                   </div>
                   <div className="col-10 foodslist">
+                  {isLoading ? 
+                  
+                        <div className='container col-10 justify-content-center loading py-5'>
+                              <div className='row col-8 justify-content-center'>
+                              <img src={IMAGES.logo} className="App-logo col-2" alt="logo" /> 
+                              </div>
+                              <div className='row py-5 col-8 font-weight-bold'>
+                              <h1>Loading...</h1> 
+                              </div>
+                        </div>
+                        
+                        :
+        
                         <ul className="row col-lg-10">
                               {foods.map((foods) => (
                                     <Foods
@@ -38,7 +51,8 @@ const BooksList = ({setFoodtype, foods}) => {
                                     />
                               ))}
                         </ul>
-                  </div>
+                  }
+</div>
             </div>
       </div>
   )

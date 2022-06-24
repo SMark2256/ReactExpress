@@ -38,7 +38,7 @@ const Footer = () => {
 
         <div className="text-center">
         <strong> © 2022 Copyright</strong>: &nbsp;
-        <a className="text-light" href="https://github.com/SMark2256/ReactExpress" target="_blank">SMark2256</a>
+        <a className="text-light" href="https://github.com/SMark2256/ReactExpress" target="_blank" rel="noreferrer" >SMark2256</a>
         </div>
     </div>
   </footer>

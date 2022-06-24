@@ -14,7 +14,7 @@ const IMAGES = {
     heartunfilled: require('./media/heartunfilled.png').default,
     heartfilled: require('./media/heartfilled.png').default,
 
-    logo: require('./logo.svg').default
+    logo: require('./media/logo.svg').default
 
 }
 
