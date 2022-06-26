@@ -1,8 +1,10 @@
 import React from 'react'
 //util
 import addHandler from '../util/Postdata.js'
+
 //icon
 import { CgProfile } from 'react-icons/cg'
+import { BsFillCartCheckFill } from 'react-icons/bs'
 //css
 import './Header.css'
 
@@ -41,10 +43,12 @@ const Header= ({foodtype, foods, setShow, show}) => {
 
             <div className="col-4 text-center py-3">
               <CgProfile size={40} role="button" className="mx-4 bg-dark text-white rounded-circle" onClick={() => console.log("profile page")}/>
+              <BsFillCartCheckFill size={40} role="button" className="mx-4 text-white" onClick={() => console.log("profile page")}/>
             </div>
           </div>
         </div>
       </div>
+  
   )
 }
 

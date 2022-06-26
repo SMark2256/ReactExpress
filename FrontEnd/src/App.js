@@ -1,8 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
+//import { Route, BrowserRouter as Router } from 'react-router-dom'
 //components
-import BooksList from './components/Foodslist'
+import FoodsList from './components/Foodslist'
 import Footer from './components/Footer'
 import Header from './components/Header'
+//import Home from './pages/Home.js'
+import Cart from './components/Cart'
 //util
 import fetchMoviesHandler from './util/Getdata.js'
 //css
@@ -25,9 +28,10 @@ function App() {
   return (
     <React.Fragment>
       <Header foods={foods} foodtype={foodtype} setShow={setShow} show={show} fetchMoviesHandler={fetchMoviesHandler}/>
-      <section className='foodtable'>
+      <Cart foods={foods}/>
+     <section className='foodtable'>
         {show && foods.length > 0 && 
-          <BooksList isLoading={isLoading} setFoodtype={setFoodtype} foods={foods}/>
+          <FoodsList isLoading={isLoading} setFoodtype={setFoodtype} foods={foods}/>
         }
         {show && !isLoading && foods.length === 0 && 
           <p className='text-center text-bold'>Found no foods</p>

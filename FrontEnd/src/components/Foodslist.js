@@ -2,12 +2,11 @@ import React from 'react'
 //component
 import Foods from './Foods.js'
 //css
-import 'bootstrap/dist/css/bootstrap.min.css'
 import './Foodslist.css'
 //images
 import IMAGES from '../images/Images.js'
 
-const BooksList = ({setFoodtype, foods, isLoading}) => {
+const FoodsList = ({setFoodtype, foods, isLoading, setinCart}) => {
       
 
   return (
@@ -52,10 +51,10 @@ const BooksList = ({setFoodtype, foods, isLoading}) => {
                               ))}
                         </ul>
                   }
-</div>
+                  </div>
             </div>
       </div>
   )
 }
 
-export default BooksList
+export default FoodsList
