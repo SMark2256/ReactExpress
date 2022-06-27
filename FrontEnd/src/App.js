@@ -30,7 +30,11 @@ function App() {
       <Cart foods={foods}/>
      <section className='foodtable'>
         {show && foods.length > 0 && 
+<<<<<<< HEAD
+          <FoodsList setinCart={setinCart} isLoading={isLoading} setFoodtype={setFoodtype} foods={foods}/>
+=======
           <FoodsList inCart={inCart} setinCart={setinCart} isLoading={isLoading} setFoodtype={setFoodtype} foods={foods}/>
+>>>>>>> d2c779850d6e3bb0d335dfc91f024452f6480f2d
         }
         {show && !isLoading && foods.length === 0 && 
           <p className='text-center text-bold'>Found no foods</p>
