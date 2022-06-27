@@ -13,7 +13,7 @@ const Cart = (inCart) =>{
     return (
         <>
         <BsFillCartCheckFill size={40} role="button" className="mx-4 text-white" onClick={() => setModalShow(true)}/>
-        { modalShow && <ModalBox inCart={inCart}/> }
+        { modalShow && <ModalBox inCart={inCart}/> 22}
         </>
         
     )
