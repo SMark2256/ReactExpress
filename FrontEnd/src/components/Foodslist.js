@@ -6,9 +6,7 @@ import './Foodslist.css'
 //images
 import IMAGES from '../images/Images.js'
 
-const FoodsList = ({setFoodtype, foods, isLoading, setinCart}) => {
-      
-
+const FoodsList = ({setFoodtype, foods, isLoading, setinCart, inCart}) => {
   return (
       <div className="container-fluid list">
             <div className="row listelements gx-5">
@@ -29,7 +27,7 @@ const FoodsList = ({setFoodtype, foods, isLoading, setinCart}) => {
                   
                         <div className='container col-10 justify-content-center loading py-5'>
                               <div className='row col-8 justify-content-center'>
-                              <img src={IMAGES.logo} className="App-logo col-2" alt="logo" /> 
+                              <img src={IMAGES.logo} className="App-logo col-2" alt="" /> 
                               </div>
                               <div className='row py-5 col-8 font-weight-bold'>
                               <h1>Loading...</h1> 
@@ -40,7 +38,8 @@ const FoodsList = ({setFoodtype, foods, isLoading, setinCart}) => {
         
                         <ul className="row col-lg-11 mx-5">
                               {foods.map((foods) => (
-                                    <Foods
+                                    <Foods setinCart={setinCart}
+                                          inCart={inCart}
                                           id={foods.id}
                                           type={foods.type}
                                           name={foods.name}

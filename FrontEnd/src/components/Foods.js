@@ -11,7 +11,7 @@ import heartunfilled from '../images/media/heartunfilled.png'
 import heartfilled from '../images/media/heartfilled.png'
 import IMAGES from '../images/Images.js'
 
-const Foods = (props , setinCart) => {
+const Foods = (props) => {
       const [imgIcon, setimgIcon] = useState(heartunfilled)
       const [imgClass, setimgClass] = useState("")
 
@@ -22,8 +22,11 @@ const Foods = (props , setinCart) => {
 
 
       const intoCart = (foodName, foodType, foodPrice) =>{
-            const productsToCart = [foodName,foodType, foodPrice]
-            setinCart(productsToCart)
+            const array = []
+            const productsToCart = [foodName, foodType, foodPrice]
+            array.push(productsToCart)
+            props.setinCart([...props.inCart, array])
+
       }
 
   return (
@@ -40,7 +43,7 @@ const Foods = (props , setinCart) => {
               </div>
               <div className="iconbutton row justify-content-center"><h2>
                   <button className="heart mx-2"><img src={imgIcon} className="hearticon" alt="" onClick={() => iconChange(imgIcon)}/></button>
-                  <button className="cart mx-2"><img src={carticon} className="carticon" alt="" onClick={() => intoCart(props.id, props.type, props.price)}/></button>
+                  <button className="cart mx-2"><img src={carticon} className="carticon" alt="" onClick={() => intoCart(props.name, props.type, props.price)}/></button>
                   </h2>
               </div>
         </li>

@@ -1,14 +1,14 @@
 import React from 'react'
+//components/
+import Cart from './Cart'
 //util
 import addHandler from '../util/Postdata.js'
-
 //icon
 import { CgProfile } from 'react-icons/cg'
-import { BsFillCartCheckFill } from 'react-icons/bs'
 //css
 import './Header.css'
 
-const Header= ({foodtype, foods, setShow, show}) => {
+const Header= ({inCart, setShow, show}) => {
   return (
     <div className="nav">
         <div className="blur">
@@ -41,9 +41,10 @@ const Header= ({foodtype, foods, setShow, show}) => {
             
             </div> */}
 
-            <div className="col-4 text-center py-3">
-              <CgProfile size={40} role="button" className="mx-4 bg-dark text-white rounded-circle" onClick={() => console.log("profile page")}/>
-              <BsFillCartCheckFill size={40} role="button" className="mx-4 text-white" onClick={() => console.log("profile page")}/>
+            <div className="col-4 text-center py-3 position-relative">
+              <CgProfile size={40} role="button" className="mx-2 bg-dark text-white rounded-circle" onClick={() => console.log("profile page")}/>
+              <Cart inCart={inCart} />
+              <text className="counterbox pe-2 ps-2 rounded-circle text-black bg-light">{inCart.length}</text>
             </div>
           </div>
         </div>

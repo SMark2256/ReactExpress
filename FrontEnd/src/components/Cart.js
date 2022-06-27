@@ -1,14 +1,21 @@
 import React, {useState} from 'react'
-import { CgLogOff } from 'react-icons/cg'
+//icons
+import { BsFillCartCheckFill } from 'react-icons/bs'
+
+import ModalBox from '../ui/modal.js'
+
+const Cart = (inCart) =>{
+    
+  const [modalShow, setModalShow] = useState(false);
+  console.log(inCart)
 
 
-const Cart = (foods) =>{
-    const [inCart, setinCart] = useState([])
-
-    console.log(inCart)
     return (
         <>
+        <BsFillCartCheckFill size={40} role="button" className="mx-4 text-white" onClick={() => setModalShow(true)}/>
+        { modalShow && <ModalBox inCart={inCart}/> }
         </>
+        
     )
 }
 

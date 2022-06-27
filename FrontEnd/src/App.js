@@ -18,20 +18,19 @@ function App() {
   const [foodtype, setFoodtype] = useState('best-foods')
   const [isLoading, setLoading] = useState(false)
   const [show, setShow] = useState(true)
-  
+  const [inCart, setinCart] = useState([])
 
   useEffect(() => {
     fetchMoviesHandler(foodtype,setFoods,setLoading);
   }, [foodtype]);
 
-  console.log("LOADING?"+isLoading)
   return (
     <React.Fragment>
-      <Header foods={foods} foodtype={foodtype} setShow={setShow} show={show} fetchMoviesHandler={fetchMoviesHandler}/>
+      <Header inCart={inCart} foods={foods} foodtype={foodtype} setShow={setShow} show={show} fetchMoviesHandler={fetchMoviesHandler}/>
       <Cart foods={foods}/>
      <section className='foodtable'>
         {show && foods.length > 0 && 
-          <FoodsList isLoading={isLoading} setFoodtype={setFoodtype} foods={foods}/>
+          <FoodsList inCart={inCart} setinCart={setinCart} isLoading={isLoading} setFoodtype={setFoodtype} foods={foods}/>
         }
         {show && !isLoading && foods.length === 0 && 
           <p className='text-center text-bold'>Found no foods</p>
