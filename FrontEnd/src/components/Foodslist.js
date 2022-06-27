@@ -38,13 +38,8 @@ const FoodsList = ({setFoodtype, foods, isLoading, setinCart, inCart}) => {
         
                         <ul className="row col-lg-11 mx-5">
                               {foods.map((foods) => (
-<<<<<<< HEAD
-                                    <Foods 
-                                          setinCart = {setinCart}
-=======
                                     <Foods setinCart={setinCart}
                                           inCart={inCart}
->>>>>>> d2c779850d6e3bb0d335dfc91f024452f6480f2d
                                           id={foods.id}
                                           type={foods.type}
                                           name={foods.name}
