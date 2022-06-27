@@ -31,7 +31,7 @@ function App() {
       <Cart foods={foods}/>
      <section className='foodtable'>
         {show && foods.length > 0 && 
-          <FoodsList isLoading={isLoading} setFoodtype={setFoodtype} foods={foods}/>
+          <FoodsList setinCart={setinCart} isLoading={isLoading} setFoodtype={setFoodtype} foods={foods}/>
         }
         {show && !isLoading && foods.length === 0 && 
           <p className='text-center text-bold'>Found no foods</p>

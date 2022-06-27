@@ -40,7 +40,8 @@ const FoodsList = ({setFoodtype, foods, isLoading, setinCart}) => {
         
                         <ul className="row col-lg-11 mx-5">
                               {foods.map((foods) => (
-                                    <Foods
+                                    <Foods 
+                                          setinCart = {setinCart}
                                           id={foods.id}
                                           type={foods.type}
                                           name={foods.name}
