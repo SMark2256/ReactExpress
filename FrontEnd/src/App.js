@@ -4,8 +4,7 @@ import React, { useState, useEffect } from 'react'
 import FoodsList from './components/Foodslist'
 import Footer from './components/Footer'
 import Header from './components/Header'
-//import Home from './pages/Home.js'
-import Cart from './components/Cart'
+import ModalBox from './ui/modal'
 //util
 import fetchMoviesHandler from './util/Getdata.js'
 //css
@@ -15,10 +14,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   const [foods, setFoods] = useState([])
-  const [foodtype, setFoodtype] = useState('best-foods')
+  const [foodtype, setFoodtype] = useState('burgers')
   const [isLoading, setLoading] = useState(false)
   const [show, setShow] = useState(true)
   const [inCart, setinCart] = useState([])
+  const [openModal, setOpenModal] = useState(false)
 
   useEffect(() => {
     fetchMoviesHandler(foodtype,setFoods,setLoading);
@@ -26,9 +26,9 @@ function App() {
 
   return (
     <React.Fragment>
-      <Header inCart={inCart} foods={foods} foodtype={foodtype} setShow={setShow} show={show} fetchMoviesHandler={fetchMoviesHandler}/>
-      <Cart foods={foods}/>
-     <section className='foodtable'>
+      <Header open={() => setOpenModal(true)}  inCart={inCart} foods={foods} foodtype={foodtype} setShow={setShow} show={show} fetchMoviesHandler={fetchMoviesHandler}/>
+      <ModalBox open={openModal} onClose={() => setOpenModal(false)} inCart={inCart} setinCart={setinCart}/>
+    <section className= {openModal === false ? 'foodtable' : 'foodtable foodtableBlur'}>
         {show && foods.length > 0 && 
           <FoodsList inCart={inCart} setinCart={setinCart} isLoading={isLoading} setFoodtype={setFoodtype} foods={foods}/>
         }

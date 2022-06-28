@@ -1,22 +1,19 @@
 import React from 'react'
-//components/
-import Cart from './Cart'
-//util
-import addHandler from '../util/Postdata.js'
 //icon
 import { CgProfile } from 'react-icons/cg'
+import { BsFillCartCheckFill } from 'react-icons/bs'
 //css
 import './Header.css'
 
-const Header= ({inCart, setShow, show}) => {
+const Header= ({ open, inCart, setShow, show}) => {
   return (
     <div className="nav">
         <div className="blur">
           <div className="container-fluid col-12 row">
             <div className="col-4 gx-0 py-3">
-              <button className="btn mx-5 btn-primary" onClick={() => setShow(!show)}>Főoldal</button>
-              <button className="btn mx-2 btn-primary" onClick={() => setShow(!show)}>Rendelés</button>
-              <button className="btn mx-2 btn-primary" onClick={() => setShow(!show)}>Bejelentkezés</button>
+              <button className="btn mx-5 btn-primary" onClick={() => console.log("coming soon!")}>Főoldal</button>
+              <button className="btn mx-2 btn-primary" onClick={() => console.log("coming soon!")}>Rendelés</button>
+              <button className="btn mx-2 btn-primary" onClick={() => console.log("coming soon!")}>Bejelentkezés</button>
             </div>
 
             <div className="col-4 py-2 text-center">
@@ -42,8 +39,8 @@ const Header= ({inCart, setShow, show}) => {
             </div> */}
 
             <div className="col-4 text-center py-3 position-relative">
-              <CgProfile size={40} role="button" className="mx-2 bg-dark text-white rounded-circle" onClick={() => console.log("profile page")}/>
-              <Cart inCart={inCart} />
+              <CgProfile size={40} role="button" className="mx-2 bg-dark text-white rounded-circle" onClick={() => console.log("coming soon!")}/>
+              <BsFillCartCheckFill size={40} role="button" className="mx-4 text-white" onClick={open}/>
               <text className="counterbox pe-2 ps-2 rounded-circle text-black bg-light">{inCart.length}</text>
             </div>
           </div>
