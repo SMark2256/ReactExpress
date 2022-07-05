@@ -22,10 +22,17 @@ const Foods = (props) => {
 
 
       const intoCart = (foodName, foodType, foodPrice) =>{
-            const array = []
-            const productsToCart = [foodName, foodType, foodPrice]
-            array.push(productsToCart)
-            props.setinCart([...props.inCart, array])
+            const productsToCart = {foodName, foodType, foodPrice}
+
+            const fooditems= []
+
+                  fooditems.push({
+                        name: productsToCart.foodName,
+                        type: productsToCart.foodType,
+                        price: productsToCart.foodPrice
+                        });
+                  
+            props.setinCart([...props.inCart,fooditems])
 
       }
 
